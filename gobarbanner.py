@@ -3,6 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 data = pd.read_csv('data.csv')
 images = []
+n = 3 # images per row
 
 def grade_to_colour(grade):
     if grade=='A':
@@ -39,12 +40,12 @@ for index, row in data.iterrows():
 
     images.append(img)
 
-stitched_width = 1200
-stitched_height = ((len(images) + 2) // 3) * 400
+stitched_width = n * 400
+stitched_height = ((len(images) + n - 1) // n) * 400
 
 final_image = Image.new('RGB', (stitched_width, stitched_height), color=(255, 255, 255))
 
 for idx, img in enumerate(images):
-    final_image.paste(img, ((idx % 3) * 400, (idx // 3) * 400))
+    final_image.paste(img, ((idx % n) * 400, (idx // n) * 400))
 
 final_image.save('output/stitched.jpg')
