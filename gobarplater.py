@@ -37,7 +37,10 @@ for index, row in data.iterrows():
     draw.text((340, 175), f"{row['scab']}", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir Next", size=20))
     draw.text((340, 225), f"{row['isofix']}", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir Next", size=20))
     
-    draw.line([40, 265, 360, 265], fill=(0, 0, 0))
+    draw.line([40, 265, 120, 265], fill=(129, 213, 82))
+    draw.line([120, 265, 200, 265], fill=(249, 217, 87))
+    draw.line([200, 265, 280, 265], fill=(226, 121, 46))
+    draw.line([280, 265, 360, 265], fill=(220, 59, 38))
 
     draw.text((40, 275), f"Evaluated on {row['date']}.\nMore information at: bit.ly/gobargrades2025\n\nEvaluation results are subject to error and may\nbe revised or removed without notice.", fill=(0, 0, 0), align='left', font_size=15)
 
