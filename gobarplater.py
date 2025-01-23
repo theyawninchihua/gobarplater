@@ -13,6 +13,8 @@ def grade_to_colour(grade):
         return (226, 121, 46)
     elif grade=='D':
         return (220, 59, 38)
+    elif grade=='-':
+        return (150, 150, 150)
     else:
         assert False, "grade must be in {'A', 'B', 'C', 'D'}"
 
