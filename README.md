@@ -5,8 +5,7 @@ python script for rating plates for the 2025 Gobar Grades
 ## dependencies
 * see `requirements.txt`
 ## load data
-populate `data.csv` which has the fields `brand,model,variant,rsbr,scab,isofix,date`
-* grades (rsbr, scab and isofix) must each be A, B, C or D
+populate `data.csv` which has the fields shown in the sample
 ## font packs
 * if TrueType fonts are not supported please replace `font=ImageFont.truetype(...)` in the `ImageDraw.Draw.text(...)` calls with `font_size=20` or 25 or whatever
 ## run
