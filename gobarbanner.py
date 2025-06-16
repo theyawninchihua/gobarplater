@@ -71,9 +71,9 @@ h = (((len(images)-1)//n))*200
 w = 400*(n-1)
 draw = ImageDraw.Draw(final_image)
 draw.text((w+60, h+215), "when an occupant \'is\' not belted", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir", size=15))
-draw.text((w+60, h+235), "when an occupant \'becomes\' unbelted", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir", size=15))
+draw.text((w+60, h+235), "when an occupant \'changes to\' unbelted", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir", size=15))
 draw.text((w+60, h+255), "when any belt \'is\' not fastened", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir", size=15))
-draw.text((w+60, h+275), "when any belt \'becomes\' unfastened", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir", size=15))
+draw.text((w+60, h+275), "when any belt \'changes to\' unfastened", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir", size=15))
 draw.text((w+60, h+295), "not available", fill=(0, 0, 0), align='left', font=ImageFont.truetype(font="Avenir", size=15))
 
 draw.circle([w+47.5, h+225], 5, fill=type_to_colour("i"))
