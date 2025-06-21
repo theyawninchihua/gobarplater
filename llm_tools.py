@@ -1,10 +1,10 @@
 import os
+import shutil
 from PIL import Image, ImageDraw, ImageFont
 from pydantic import BaseModel, Field
 from typing import Literal
 from datetime import date
 from string import Template
-import requests
 
 class ImageSearchSpec(BaseModel):
     """
@@ -15,24 +15,16 @@ class ImageSearchSpec(BaseModel):
         description="The make and model of the car, e.g. 'Honda City'. Do not include variant."
     )
 
-def image_search(spec: ImageSearchSpec):
+def image_search(spec: ImageSearchSpec) -> None:
+    """
+    Temp until I get a reliable image search API
+    """
     today = date.today().strftime('%d-%m-%Y')
 
     if not os.path.exists(today):
         os.mkdir(today)
-    
-    r = requests.get("https://en.wikipedia.org/w/api.php", params={
-        "action": "query", "format": "json", "prop": "pageimages",
-        "titles": spec.query, "pithumbsize": 1000
-    }).json()
 
-    pages = r.get("query", {}).get("pages", {})
-    thumb = next(iter(pages.values()), {}).get("thumbnail", {}).get("source")
-
-    if thumb:
-        img = requests.get(thumb).content
-        with open(f"{today}/model.png", "wb") as f:
-            f.write(img)
+    shutil.copy2("model.png", f"{today}/model.png")
 
 class ScorecardSpec(BaseModel):
     """
