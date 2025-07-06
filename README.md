@@ -1,21 +1,16 @@
 # gobarplater
 python script for rating plates for the 2025 Gobar Grades
 
-# to use manually
+# to test manually
 ## dependencies
 * `pandas` and `pillow`
 ## load data
-populate `data.csv` which has the fields shown in the sample
+populate `test/ScoreCardSpec.json` which has the fields shown in the sample
 ## font packs
 * if TrueType fonts are not supported please replace `font=ImageFont.truetype(...)` in the `ImageDraw.Draw.text(...)` calls with `font_size=20` or 25 or whatever
 ## run
-* to create individual rating plates and a slideshow:
 ```sh
-$python gobarplater.py
-```
-* to create a single stitched rating plate as a banner:
-```sh
-$python gobarbanner.py
+$python test.py
 ```
 
 # to use as LLM tool
@@ -27,7 +22,6 @@ change this line in `llm_pipeline.py`, make sure whatever you choose supports to
   model = init_chat_model(model="llama3.1", model_provider="ollama")
 ```
 ## run
-* to create individual rating plates and a press release:
 ```sh
 $python llm_pipeline.py
 ```
