@@ -41,7 +41,7 @@ def get_tool_call(question: str) -> list[dict]:
         HumanMessage(content=user_prompt),
     ]
 
-    model = init_chat_model(model="llama3.1", model_provider="ollama")
+    model = init_chat_model(model="accounts/fireworks/models/llama4-scout-instruct-basic", model_provider="fireworks")
     model_with_tools = model.bind_tools([ImageSearchSpec, ScorecardSpec], tool_choice="required")
 
     print("--------BEGINNING INFERENCE--------")
@@ -74,9 +74,9 @@ if __name__ == "__main__":
 
     dotenv.load_dotenv()
 
-    # question = """
-    # The Honda Ballade Elegance 1.5 has an audio signal whenever any rear seatbelt changes to unfastened while driving. It has a visual signal whenever any belt is not fastened.
-    # """
     question = input("\nDescribe the car and its rear seatbelt reminder audio and visual signals:\n")
+    question = """
+    The Hyundai Alcazar Prestige 1.5 T-GDi has an audio signal whenever any rear seatbelt changes to unfastened while driving. It has a visual signal whenever any belt is not fastened.
+    """
 
     create_and_save(question)

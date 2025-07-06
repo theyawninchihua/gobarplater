@@ -202,7 +202,7 @@ def scorecard(spec: ScorecardSpec) -> None:
                                
     \begin{center}
         \includegraphics[width=0.95\linewidth]{$today/model.png}
-        \textit{The $make $model (image: Wikimedia)}
+        \textit{The $make $model (image: $make)}
     \end{center}
 
     \begin{footnotesize}

@@ -1,0 +1,13 @@
+[
+    {
+        "args":
+        {
+            "make":"Isuzu",
+            "model":"D-MAX HI-LANDER",
+            "variant":"2WD MT",
+            "audio_signal":"i",
+            "visual_signal":"i",
+            "centre_seat_sensor":true
+        }
+    }
+]

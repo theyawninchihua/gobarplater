@@ -1,5 +1,5 @@
 pillow
 pydantic>=2.0
-requests
+duckduckgo-search==0.9
 langchain
 langchain-core
