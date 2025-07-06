@@ -5,7 +5,7 @@ python script for rating plates for the 2025 Gobar Grades
 ## dependencies
 * `pandas` and `pillow`
 ## load data
-populate `test/ScoreCardSpec.json` which has the fields shown in the sample
+populate `tests/ScoreCardSpec.json` which has the fields shown in the sample
 ## font packs
 * if TrueType fonts are not supported please replace `font=ImageFont.truetype(...)` in the `ImageDraw.Draw.text(...)` calls with `font_size=20` or 25 or whatever
 ## run
