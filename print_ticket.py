@@ -17,6 +17,6 @@ def send_to_escpos_printer(path):
     p.text("\n") # save paper by feeding fewer lines
 
 if __name__ == '__main__':
-    if len(sys.argv < 2):
+    if len(sys.argv) < 2:
         print("expected path to image as command line argument")
     send_to_escpos_printer(sys.argv[1])
